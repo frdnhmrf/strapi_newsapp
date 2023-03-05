@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saveds",
+  "info": {
+    "singularName": "saved",
+    "pluralName": "saveds",
+    "displayName": "Saved"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "new": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::new.new",
+      "inversedBy": "saved"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "saved"
+    }
+  }
+}
